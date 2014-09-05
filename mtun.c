@@ -70,7 +70,7 @@ int main(int argc, char *argv[])
 	if(fork()) {
 		if (setsockopt(sock, IPPROTO_IP, IP_MULTICAST_TTL,
 		               (char *) &ttl, 1) < 0 ) {
-			perror("Fuck off");
+			perror("setsockopt error");
 			exit(EXIT_FAILURE);
 		}
 
